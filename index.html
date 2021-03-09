@@ -36,15 +36,16 @@
       // Generatore di "nomi cognomi" casuali: prendendo una
       // lista di nomi e una lista di cognomi, Gatsby vuole
       // generare una falsa lista di invitati.
+
       var names = ['Michele', 'Fabio', 'Roberto'];
       var lastnames = ['Forghieri', 'Papagni', 'Marazzini'];
-      var nameLng = names.lenght;
-      var lastnameLng =lastnames.lenght;
+      var nameLng = names.length;
+      var lastnameLng =lastnames.length;
       var fullnames = [];
 
       for (var i = 0; i < 5; i++) {
-        var nameRnd = names[Math.floor(Math.random() * 3)];
-        var lastnameRnd = lastnames[Math.floor(Math.random() * 3)];
+        var nameRnd = names[Math.floor(Math.random() * nameLng)];
+        var lastnameRnd = lastnames[Math.floor(Math.random() * lastnameLng)];
 
         fullnames.push(nameRnd + ' ' + lastnameRnd);
       }
@@ -112,18 +113,19 @@
       // Un div avrà il testo colorato di rosso mentre l'altro di verde.
       // Partendo da un array di numeri, stampiamo nell'id rosso i numeri
       // dispari e in verde i numeri pari.
+
       var numbers = [15, 20, 1, 3, 22, 10, 23, 56, 43, 78, 12];
-      var divVerde = document.getElementById('verde');
-      var divRosso = document.getElementById('rosso');
+      var colorVerde = document.getElementById('verde');
+      var colorRosso = document.getElementById('rosso');
 
       for (var i = 0; i < numbers.length; i++) {
         var number = numbers[i]
 
         if (number % 2 == 0) {
-          divVerde.innerHTML += number + ', ';
+          colorVerde.innerHTML += number + ', ';
         }
         else{
-          divRosso.innerHTML += number + ', ';
+          colorRosso.innerHTML += number + ', ';
         }
 
       }
