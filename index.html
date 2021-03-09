@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ripetizione d'esercizio</title>
+    <style>
+
+      body{
+        background-color: rgb(218, 114, 114);
+      }
+      .contenitore{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Primo esercizio -->
+    <script>
+
+      // Generatore di "nomi cognomi" casuali: prendendo una
+      // lista di nomi e una lista di cognomi, Gatsby vuole
+      // generare una falsa lista di invitati.
+      var names = ['Michele', 'Fabio', 'Roberto'];
+      var lastnames = ['Forghieri', 'Papagni', 'Marazzini'];
+      var nameLng = names.lenght;
+      var lastnameLng =lastnames.lenght;
+      var fullnames = [];
+
+      for (var i = 0; i < 5; i++) {
+        var nameRnd = names[Math.floor(Math.random() * 3)];
+        var lastnameRnd = lastnames[Math.floor(Math.random() * 3)];
+
+        fullnames.push(nameRnd + ' ' + lastnameRnd);
+      }
+
+      console.log(fullnames);
+
+    </script>
+
+    <!-- Secondo esercizio -->
+    <script>
+
+    // Crea due array che hanno un numero di elementi diversi.
+      // Aggiungi elementi all'array che ha meno elementi fino a
+      // quando ne avrà tanti quanti l'altro.
+      var arr1 = [ 3, 6, 33, 2, 56, 12, 23];
+      var arr2 = [ 45, 18, 41];
+      var lng1 = arr1.length;
+      var lng2 = arr2.length;
+
+        if (lng1 == lng2) {
+          var shortArr = arr1;
+          var longArr = arr2;
+        }
+        else if(lng2 > lng1) {
+          var shortArr = arr1;
+          var longArr = arr2;
+        }
+        else{
+          var shortArr = arr2;
+          var longArr = arr1;
+        }
+
+      var elemMancanti = longArr.length - shortArr.length;
+
+      for (var i = 0; i < elemMancanti; i++) {
+        var elemRnd = Math.floor(Math.random() * 100) + 1;
+        shortArr.push(elemRnd);
+      }
+
+      console.log(shortArr, longArr);
+
+    </script>
+
+    <!-- Terzo esercizio -->
+
+    <script>
+
+      var limit = parseInt(prompt('Inserisci un valore limite:'));
+      var sum = 0
+      while (limit >= sum) {
+
+        var number = parseInt(prompt('Dimmi un valore:'));
+        sum += number;
+        console.log(number)
+
+      }
+
+      console.log(sum);
+
+    </script>
+
+    <!-- Quarto esercizio -->
+    <script>
+
+      // Crea due tag div con due id diversi.
+      // Un div avrà il testo colorato di rosso mentre l'altro di verde.
+      // Partendo da un array di numeri, stampiamo nell'id rosso i numeri
+      // dispari e in verde i numeri pari.
+      var numbers = [15, 20, 1, 3, 22, 10, 23, 56, 43, 78, 12];
+      var divVerde = document.getElementById('verde');
+      var divRosso = document.getElementById('rosso');
+
+      for (var i = 0; i < numbers.length; i++) {
+        var number = numbers[i]
+
+        if (number % 2 == 0) {
+          divVerde.innerHTML += number + ', ';
+        }
+        else{
+          divRosso.innerHTML += number + ', ';
+        }
+
+      }
+
+      </script>
+  </body>
+</html>
