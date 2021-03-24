@@ -57,7 +57,6 @@ function es2(){
     console.log('eta: ' + value.eta);
     console.log();
 
-
   }
 
 
