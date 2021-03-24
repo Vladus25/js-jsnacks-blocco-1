@@ -79,9 +79,17 @@ function es3() {
   }
 
   console.log('Studente: ' + newStudent.number);
-  console.log('nome: ' + newStudent.nome);
-  console.log('cognome: ' + newStudent.cognome);
-  console.log('eta: ' + newStudent.eta);
+  $('#numero').text('Studente: ' + newStudent.number);
+
+  console.log('Nome: ' + newStudent.nome);
+  $('#nome').text('Nome: ' + newStudent.nome);
+
+  console.log('Cognome: ' + newStudent.cognome);
+  $('#cognome').text('Cognome: ' + newStudent.cognome);
+
+  console.log('Eta: ' + newStudent.eta);
+  $('#eta').text('Eta: ' + newStudent.eta);
+
   console.log();
 
 }
