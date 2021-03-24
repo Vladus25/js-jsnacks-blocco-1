@@ -71,25 +71,20 @@ function es3(arrStudent) {
   var cognome = prompt('Inserisci Cognome del Studente:');
   var eta = prompt('Inserisci Eta del Studente:');
 
-  var arrST = [
-  {
+  var newStudent = {
+
     'number': number,
     'nome': nome,
     'cognome': cognome,
     'eta': eta
+    
   }
-  ]
 
-  for (var key2 in arrST) {
-
-    var value = arrST[key2];
-    console.log('Studente: ' + value.number);
-    console.log('nome: ' + value.nome);
-    console.log('cognome: ' + value.cognome);
-    console.log('eta: ' + value.eta);
-    console.log();
-
-  }
+  console.log('Studente: ' + newStudent.number);
+  console.log('nome: ' + newStudent.nome);
+  console.log('cognome: ' + newStudent.cognome);
+  console.log('eta: ' + newStudent.eta);
+  console.log();
 
 }
 
