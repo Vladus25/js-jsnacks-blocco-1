@@ -1,4 +1,6 @@
 
+var number = 5;
+
 function es1(){
 
   var student1 = {
@@ -59,14 +61,10 @@ function es2(){
 
   }
 
-
-  return arrStudent;
-
 }
 
-function es3(arrStudent) {
+function es3() {
 
-  var number = 5;
   var nome = prompt('Inserisci Nome del Studente:');
   var cognome = prompt('Inserisci Cognome del Studente:');
   var eta = prompt('Inserisci Eta del Studente:');
@@ -77,7 +75,7 @@ function es3(arrStudent) {
     'nome': nome,
     'cognome': cognome,
     'eta': eta
-    
+
   }
 
   console.log('Studente: ' + newStudent.number);
@@ -88,16 +86,15 @@ function es3(arrStudent) {
 
 }
 
-
-
 function init(){
 
   es1();
   es2();
   $('#newStudent').click(es3);
-
+  $('button').click(function(){
+    number += 1;
+  })
 
 }
-
 
 $(document).ready(init);
